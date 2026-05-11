@@ -126,10 +126,20 @@ class BayesModel:
             sigma_obs = pm.HalfNormal('sigma_obs', 5)
             pm.Normal('obs', mu=mu, sigma=sigma_obs, observed=y)
 
-            self.trace = pm.sample(
-                draws, tune=tune, target_accept=target_accept,
-                random_seed=seed, nuts_sampler='nutpie'
+            try:
+                import nutpie  # noqa: F401
+                sampler = 'nutpie'
+            except ImportError:
+                sampler = None  # PyMC default NUTS
+
+            sample_kwargs = dict(
+                draws=draws, tune=tune, target_accept=target_accept,
+                random_seed=seed,
             )
+            if sampler is not None:
+                sample_kwargs['nuts_sampler'] = sampler
+
+            self.trace = pm.sample(**sample_kwargs)
 
         return self.trace
 
