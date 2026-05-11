@@ -4,6 +4,6 @@ pandas>=2.0
 pymc>=5.0
 arviz>=0.15
 matplotlib>=3.7
-pyDOE2
-nutpie>=0.9; sys_platform != 'linux'
+# pyDOE2  # optional: for LHS sampling, install separately if needed
+# nutpie  # optional: faster NUTS sampler, install separately if available
 pytest>=7.0
