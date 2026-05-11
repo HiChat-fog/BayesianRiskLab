@@ -98,10 +98,10 @@ print(f"\nInterpretation: {summary['interpretation']}")
 
 print(f"\nPrediction examples:")
 examples = [
-    (L=10, N=100, C=81),       # 2D, same size
-    (L=10, N=200, C=81),       # 2D, larger system
-    (L=5, N=100, C=81*5),      # 3D, 5 vertical layers
-    (L=3, N=200, C=81*5),      # 3D, larger system
+    (10, 100, 81),       # 2D, same size
+    (10, 200, 81),       # 2D, larger system
+    (5, 100, 81*5),      # 3D, 5 vertical layers
+    (3, 200, 81*5),      # 3D, larger system
 ]
 
 print(f"{'L':>4} {'N':>5} {'C':>5} {'Delta_pred':>10}")

@@ -226,33 +226,41 @@ bayeslab/
 
 ## Example Outputs
 
-Running `examples/03_scaling_law.py` produces:
+Running `examples/03_scaling_law.py` produces (real terminal output):
 
 ```
+============================================================
 PART 1: DIMENSIONLESS SCALING LAW
-Fitted: alpha=0.004256, beta=0.001943
-True:   alpha=0.004200, beta=0.001800
-R-squared: 0.9987
+============================================================
+Formula: Outcome/N^2 = alpha/L + beta
+Fitted:   alpha=0.004146, beta=0.001922
+True:     alpha=0.004200, beta=0.001800
+R-squared: 0.9891
 
-Predictions for N=200 (no N=200 data used in fitting):
-  L=  3, N=200: predicted Delta = 98.45
-  L= 10, N=200: predicted Delta = 26.57
-  L= 50, N=200: predicted Delta = 10.89
+Zero-shot predictions for N=200:
+  L=  3, N=200 -> predicted = 132.16
+  L= 10, N=200 -> predicted = 93.46
+  L= 50, N=200 -> predicted = 80.19
 
 Key insight: alpha and beta are UNIVERSAL constants.
-Once calibrated at one N, they predict outcomes at any N.
+Calibrate once at any N, predict at ALL N.
 
+============================================================
 PART 2: UNIFIED CROSS-DIMENSIONAL THEORY
-Fitted formula: Delta = K1/L + K2 + K3*(N/C)^d
-  K1 = 40.79
-  K2 = -25.14
-  K3 = 18.87
-  d  = 1.73
-  R-squared = 0.93
+============================================================
+Formula: Delta = K1/L + K2 + K3*(N/C)^d
+K1=42.29  K2=-20.67  K3=23.20  d=3.80
+R-squared: 0.9969
+d ~ 3.8: the dimension exponent emerges from data
+  - Pure 2D: d ~ 2.0 (quadratic density growth)
+  - Full 3D: d ~ 1.5 (vertical isolation reduces risk)
 
-Interpretation: The dimension exponent d emerges from data.
-d ≈ 2 means 2D-like scaling (quadratic density growth).
-d ≈ 1.5 means 3D with partial vertical isolation.
+   L     N     C  Predicted
+----------------------------
+  10   100    81      35.26
+  10   200    81     705.53
+   5   100   405     -12.10
+   3   200   405      -4.99
 ```
 
 ---
@@ -263,7 +271,7 @@ If you use BayesianRiskLab in your research, please cite:
 
 ```bibtex
 @software{BayesianRiskLab2026,
-  author = {Haichang Fang},
+  author = {HiChat-fog},
   title = {BayesianRiskLab: Declarative Bayesian Hierarchical Modeling \& Cross-Dimensional Scaling Laws},
   year = {2026},
   url = {https://github.com/HiChat-fog/BayesianRiskLab}
