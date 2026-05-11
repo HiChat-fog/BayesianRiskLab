@@ -1,0 +1,9 @@
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+pymc>=5.0
+arviz>=0.15
+matplotlib>=3.7
+pyDOE>=0.3
+nutpie>=0.9
+pytest>=7.0
