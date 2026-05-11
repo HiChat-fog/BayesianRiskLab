@@ -5,6 +5,7 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org)
 [![PyMC](https://img.shields.io/badge/PyMC-5.x-green)](https://www.pymc.io)
 [![License](https://img.shields.io/badge/license-MIT-purple)](LICENSE)
+[![Tests](https://github.com/2138299057-lang/BayesianRiskLab/actions/workflows/test.yml/badge.svg)](https://github.com/2138299057-lang/BayesianRiskLab/actions)
 
 A unified toolkit for building Bayesian hierarchical models with **zero boilerplate**, deriving **universal scaling laws** from data, and making **optimal decisions under uncertainty**. Built on PyMC + ArviZ + NUTS sampler.
 
