@@ -5,7 +5,7 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org)
 [![PyMC](https://img.shields.io/badge/PyMC-5.x-green)](https://www.pymc.io)
 [![License](https://img.shields.io/badge/license-MIT-purple)](LICENSE)
-[![Tests](https://github.com/2138299057-lang/BayesianRiskLab/actions/workflows/test.yml/badge.svg)](https://github.com/2138299057-lang/BayesianRiskLab/actions)
+[![Tests](https://github.com/HiChat-fog/BayesianRiskLab/actions/workflows/test.yml/badge.svg)](https://github.com/HiChat-fog/BayesianRiskLab/actions)
 
 A unified toolkit for building Bayesian hierarchical models with **zero boilerplate**, deriving **universal scaling laws** from data, and making **optimal decisions under uncertainty**. Built on PyMC + ArviZ + NUTS sampler.
 
@@ -155,7 +155,7 @@ design = lhs_design(
 ## Installation
 
 ```bash
-git clone https://github.com/2138299057-lang/BayesianRiskLab.git
+git clone https://github.com/HiChat-fog/BayesianRiskLab.git
 cd BayesianRiskLab
 pip install -r requirements.txt
 ```
@@ -266,7 +266,7 @@ If you use BayesianRiskLab in your research, please cite:
   author = {Haichang Fang},
   title = {BayesianRiskLab: Declarative Bayesian Hierarchical Modeling \& Cross-Dimensional Scaling Laws},
   year = {2026},
-  url = {https://github.com/2138299057-lang/BayesianRiskLab}
+  url = {https://github.com/HiChat-fog/BayesianRiskLab}
 }
 ```
 
